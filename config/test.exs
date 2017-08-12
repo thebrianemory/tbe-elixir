@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :tbe_elixir, TbeElixir.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "brianemory",
+  password: "",
   database: "tbe_elixir_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
