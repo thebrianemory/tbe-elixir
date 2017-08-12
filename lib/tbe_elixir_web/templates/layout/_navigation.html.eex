@@ -19,7 +19,7 @@
             <%= link "", to: "#page-top", class: "page-scroll" %>
           </li>
           <li>
-            <%= link "Blog", to: "blog", class: "page-scroll blue-text" %>
+            <%= link "Blog", to: "#blog", class: "page-scroll blue-text" %>
           </li>
           <li>
             <%= link "Projects", to: "#projects", class: "page-scroll blue-text" %>
