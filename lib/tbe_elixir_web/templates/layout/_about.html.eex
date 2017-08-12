@@ -1,0 +1,34 @@
+<section class="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-offset-1">
+        <div class="hr-section">
+          <h4 class="section-header">
+            Hi, I'm Brian Emory.
+          </h4>
+        </div>
+
+        <div class="text-left about-text">
+          <div>
+            <%= img_tag(static_path(@conn, "/images/me_at_beach.jpg"),
+                class: "about-pic img-responsive", alt: "Me at beach") %>
+          </div>
+          <p>
+            But you probably already knew that since you went to my website. You can find me all over @thebrianemory. I am a web developer with giraffe-like qualities currently residing in Los Angeles, CA with my wife and our three kitties Thor, Tony, and Captain (that's right, she let me name them after Avengers). I enjoy bad movies, hard cider, and love pizza. I am a bit of a romantic, a goofball, and a gamer. My lucky number is 13 which sounds odd, but if you ask me how I met my wife it will all make sense (spoiler alert, it involves the number 13).
+          </p>
+          <p>
+            While my first love is Ruby on Rails, I have recently taken to learning Elixir. After completing a Udemy course and then putting together my first <%= link "Elixir/Phoenix app", to: "https://github.com/thebrianemory/vidshare", target: "_blank", class: "about-link" %>, I have decided to <%= link "focus solely on Elixir", to: "https://medium.brianemory.com/focusing-on-programming-elixir-a77daab98c05", target: "_blank", class: "about-link" %>. I enjoy writing Elixir, enjoy reading the code, and look forward to doing it in my day-to-day work.
+          </p>
+
+          <p>
+            Programming is a passion and something I really enjoy doing. It feels good to have a passion not only be a career, but something you can do for fun and to help people out. Every day there is more things to learn and more code to write.
+          </p>
+          <p>
+            You can read what I am up to on my blog, check out my current projects on GitHub, and connect with me on Twitter and LinkedIn. I look forward to hearing from you!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
