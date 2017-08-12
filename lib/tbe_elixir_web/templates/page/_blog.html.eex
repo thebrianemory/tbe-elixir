@@ -1,0 +1,20 @@
+<section class="blog-section" id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-offset-1">
+        <div class="hr-section">
+          <big class="section-header">
+              Blog
+          </big>
+        </div>
+        <div class="row">
+          <%= render "_post.html", conn: @conn %>
+        </div>
+        <div>
+          <%= link "Read more posts on Medium", to: "https://medium.brianemory.com", target: '_blank', class: 'btn custom-btn' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

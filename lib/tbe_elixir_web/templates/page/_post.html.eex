@@ -1,0 +1,17 @@
+<div class="col-md-4 text-left">
+  <h4 class="blog-title">
+    Title
+    <%# <%= link_to post[:title], post[:link], target: '_blank' %1> %>
+    <%# <small class="blue-text"><%= post[:date] %1></small><br> %>
+  </h4>
+  <h5>
+    Heading
+    <%# <%= post[:heading] %1> %>
+  </h5>
+  <p>
+    Content
+    <%# <%= post[:content] %1> <%= link_to 'Read more', post[:link], target: '_blank' %1> %>
+  </p>
+  <br>
+</div>
+
