@@ -1,1 +1,253 @@
 /* This file is for your main application css. */
+body {
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background: #FAFAFA;
+  color: #022e3d !important;
+}
+
+/* Custom colors */
+.blue-text, .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
+  color: #022e3d !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #022e3d !important;
+}
+
+.navbar-default .navbar-toggle, .navbar-default {
+  border-color: #022e3d !important;
+}
+
+a {
+  color: #045F7C;
+}
+
+.custom-btn {
+  background-color:#022e3d !important;
+  color: #FFFFFF;
+}
+
+/* Navbar */
+.container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
+  background: #FAFAFA;
+}
+
+@media(min-width:767px) {
+  .navbar {
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+    background: #FAFAFA;
+  }
+  .top-nav-collapse {
+    padding: 0;
+  }
+}
+
+.nav-image {
+  margin-top: -5px;
+  text-align: right;
+}
+
+.nav-text {
+  margin-left: -20px;
+  // color: #022e3d !important !important;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  background-color:#022e3d !important;
+  color: #FAFAFA !important;
+}
+
+/* Lines Around Section Titles */
+.hr-section {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: -80px;
+}
+
+.hr-section > .section-header {
+  position: relative;
+  display: inline-block;
+}
+
+.hr-section > .section-header:before, .hr-section > .section-header:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 9999px;
+  /* Here is the modification */
+  border-top: 4px double #022e3d !important;
+}
+
+.hr-section > .section-header:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.hr-section > .section-header:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+/* Section Headers */
+.section-header {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+/* Section Titles */
+.blog-section, .faq-section, .projects-section {
+  padding-top: 150px;
+  text-align: center;
+}
+
+/* About section */
+.about-section {
+  padding-top: 130px;
+  text-align: center;
+}
+
+.about-pic {
+  border: 1px solid #022e3d !important;
+  border-radius: 5%;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+.about-link {
+  text-decoration: underline;
+}
+
+/* Blog Section */
+.blog-header {
+  font-weight: bold;
+  font-size: 50px;
+}
+.blog-icon {
+  height: 60px;
+  padding-bottom: 10px;
+}
+
+.about-text, .blog-text {
+  font-size: 1.15em;
+}
+
+/* Projects Section */
+
+.project-image {
+  padding: 5px;
+  margin: auto;
+}
+
+/* Footer Section */
+.footer {
+  text-align: right;
+}
+
+/* Back To Top Button
+======================================*/
+
+#back-top{
+  position:fixed;
+  right:30px;
+  bottom:35px;
+  z-index:9999;
+}
+
+#back-top a{
+  opacity:.85;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#back-top a i{
+  padding-top: 8px;
+  text-align: center;
+}
+
+#back-top .btn-primary{
+  background: #4682B4;
+  border-color: #4682B4;
+  padding: 0px;
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+}
+
+#back-top a:hover{
+  background: #4682B4;
+  opacity: 1;
+}
+
+/* Links */
+a.blog-title {
+  color: #022e3d !important;
+  text-decoration: none;
+}
+
+a.blog-title:hover {
+  color: rgba(70, 130, 180, 0.85);
+}
+
+/* Media Queries
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+  .about-pic {
+    width: 100%;
+  }
+  .social-icons {
+    width: 100%;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+  .about-pic {
+    width: 50%;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .about-pic {
+    width: 40%;
+  }
+  .social-icons {
+    width: 30px;
+  }
+  .social-text {
+    display: none;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .about-pic {
+    width: 40%;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .about-pic {
+    width: 30%;
+  }
+}
+
+img.fw-icons {
+  padding-right: 5px;
+}
+
+.blog-title {
+  height: 3em
+}
+
