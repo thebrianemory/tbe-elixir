@@ -61,5 +61,6 @@ defmodule TbeElixirWeb.PageController do
     |> (&Regex.replace(~r{(<h4>|<h3>).*(<\/h4>\n|<\/h3>\n)}, &1, "")).()
     |> (&HtmlSanitizeEx.strip_tags(&1)).()
     |> (&Regex.replace(~r{(\n)}, &1, " ")).()
+    |> Kernel.<>("...")
   end
 end
