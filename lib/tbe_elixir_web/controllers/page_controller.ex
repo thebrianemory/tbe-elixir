@@ -3,7 +3,7 @@ defmodule TbeElixirWeb.PageController do
   use Timex
 
   def index(conn, _params) do
-    posts = get_blog_posts
+    posts = get_blog_posts()
     render conn, "index.html", posts: posts
   end
 
@@ -11,13 +11,13 @@ defmodule TbeElixirWeb.PageController do
     blog_url = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.brianemory.com%2Ffeed&api_key=#{System.get_env("RSS2JSON")}&count=3"
     json_data = HTTPoison.get!(blog_url)
     %{feed: _, items: items, status: _} = Poison.Parser.parse!(json_data.body, keys: :atoms)
-    posts = Enum.map(items, fn(item) ->
+    Enum.map(items, fn(item) ->
       get_post_data(item)
     end)
   end
 
   defp get_post_data(item) do
-    post = %{
+    %{
       title:   get_title(item.title),
       date:    get_date(item.pubDate),
       link:    get_link(item.link),
