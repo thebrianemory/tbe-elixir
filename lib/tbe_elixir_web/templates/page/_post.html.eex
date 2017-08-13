@@ -1,16 +1,13 @@
 <div class="col-md-4 text-left">
   <h4 class="blog-title">
-    Title
-    <%# <%= link_to post[:title], post[:link], target: '_blank' %1> %>
-    <%# <small class="blue-text"><%= post[:date] %1></small><br> %>
+    <%= link @post.title, to: @post.link, target: '_blank' %>
+    <small class="blue-text"><%= @post.date %></small><br>
   </h4>
   <h5>
-    Heading
-    <%# <%= post[:heading] %1> %>
+    <%= @post.heading %>
   </h5>
   <p>
-    Content
-    <%# <%= post[:content] %1> <%= link_to 'Read more', post[:link], target: '_blank' %1> %>
+    <%= @post.content %> <%= link 'Read more', to: @post.link, target: '_blank' %>
   </p>
   <br>
 </div>
