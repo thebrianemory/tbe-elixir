@@ -31,7 +31,13 @@ a {
 
 .custom-btn {
   background-color:#022e3d !important;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
+}
+
+.custom-btn:hover {
+  color:#022e3d !important;
+  background-color: #FFFFFF !important;
+  border: 1px solid #022e3d !important;
 }
 
 /* Navbar */
