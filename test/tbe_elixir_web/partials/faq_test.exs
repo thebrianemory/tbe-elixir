@@ -8,6 +8,6 @@ defmodule TbeElixirWeb.FAQPartialTest do
 
   test "shows GitHub button", %{conn: conn} do
     conn = get conn, "/"
-    assert html_response(conn, 200) =~ "<h4>How tall are you?</h4>"
+    assert html_response(conn, 200) =~ "How tall are you?"
   end
 end

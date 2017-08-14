@@ -10,7 +10,7 @@
         <%= static_path(@conn, "/images/giraffe.png")
             |> img_tag(height: "16", width: "16", class: "img-responsive nav-image")
             |> link(to: "#page-top", class: "navbar-brand page-scroll") %>
-          <%= link "Brian Emory", to: "page-top", class: "navbar-brand page-scroll nav-text blue-text" %>
+          <%= link "Brian Emory", to: "#page-top", class: "navbar-brand page-scroll nav-text blue-text" %>
       </div><!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">

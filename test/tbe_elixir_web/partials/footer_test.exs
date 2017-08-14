@@ -3,6 +3,6 @@ defmodule TbeElixirWeb.FooterPartialTest do
 
   test "shows footer", %{conn: conn} do
     conn = get conn, "/"
-    assert html_response(conn, 200) =~ "<p>© Brian Emory 2017</p>"
+    assert html_response(conn, 200) =~ "Brian Emory 2017"
   end
 end
