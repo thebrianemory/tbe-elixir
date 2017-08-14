@@ -2,4 +2,5 @@
 <%= render "_blog.html", conn: @conn, posts: @posts %>
 <%= render "_projects.html", conn: @conn %>
 <%= render "_faq.html", conn: @conn %>
+<%= render "_footer.html", conn: @conn %>
 
