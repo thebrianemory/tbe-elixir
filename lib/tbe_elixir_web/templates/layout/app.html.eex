@@ -10,7 +10,7 @@
     <title>Brian Emory | Web Developer</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <%= img_tag(static_path(@conn, "/images/icons/favicon-96x96.png")) %>
+<link rel="icon" type="image/x-icon" href="<%= static_path(@conn, "/images/icons/favicon-96x96.png") %>" %>
   </head>
 
   <body data-spy="scroll" data-target=".navbar-fixed-top" id="page-top">
