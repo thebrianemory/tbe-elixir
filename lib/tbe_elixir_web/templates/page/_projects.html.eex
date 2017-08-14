@@ -22,22 +22,22 @@
             </div>
             <div class="col-md-4">
               <h3>
-                <%# Schedule App <%= link_to 'GitHub', 'https://github.com/thebrianemory/schedule-app', target: '_blank', %>
-                                                    class: 'btn btn-xs custom-btn' %>
+                Schedule App <%= link "GitHub", to: "https://github.com/thebrianemory/schedule-app", target: "_blank", class: "btn btn-xs custom-btn" %>
               </h3>
-              <%# <%= link_to image_tag("port-schedule-app.png", class: "img-responsive project-image"), %>
-                                    'https://my-schedule-app.herokuapp.com', target: '_blank'  %>
+              <%= static_path(@conn, "/images/port-schedule-app.png")
+                  |> img_tag(class: "img-responsive project-image")
+                  |> link(to: "https://my-schedule-app.herokuapp.com", target: "_blank") %>
               <p class="text-left">
                 My wife was given a spreadsheet to create her employees' schedule from week to week. She has another spreadsheet to keep up with their availability. This a pain when balancing 18 employees. I looked around at other scheduling apps and could not find a free one that fit the bill. So I decided to make her one. Currently in Rails and soon to be redone with Elixir/Phoenix.
               </p>
             </div>
             <div class="col-md-4">
               <h3>
-                <%# Corneal <%= link_to 'GitHub', 'https://github.com/thebrianemory/corneal', target: '_blank', %>
-                                               class: 'btn btn-xs custom-btn' %>
+                Corneal <%= link "GitHub", to: "https://github.com/thebrianemory/corneal", target: "_blank", class: "btn btn-xs custom-btn" %>
               </h3>
-              <%# <%= link_to image_tag("port-corneal.jpg", class: "img-responsive project-image"), %>
-                                    'https://github.com/thebrianemory/corneal', target: '_blank' %>
+              <%= static_path(@conn, "/images/port-corneal.jpg")
+                  |> img_tag(class: "img-responsive project-image")
+                  |> link(to: "https://github.com/thebrianemory/corneal", target: "_blank") %>
               <p class="text-left">
                 Corneal is an open source Sinatra app generator with Rails-like simplicity. I wanted something as easy as <code>rails new app-name</code> for a project I was working on. Closest thing I found was a gem called Hazel. It was suggested to me to make my own. I forked Hazel and like that, Corneal was born. It was featured in <%= link "Ruby Weekly #353", to: "http://rubyweekly.com/issues/353", target: "_blank", class: "about-link" %>.
               </p>
