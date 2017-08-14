@@ -1,0 +1,49 @@
+<section class="projects-section" id="projects">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-offset-1">
+        <div class="hr-section">
+          <big class="section-header">
+              Projects
+          </big>
+        </div>
+          <!-- For first row of projects -->
+          <div class="row">
+            <div class="col-md-4">
+              <h3>
+                Vidshare <%= link "GitHub", to: "https://github.com/thebrianemory/vidshare", target: "_blank", class: "btn btn-xs custom-btn" %>
+              </h3>
+              <%= static_path(@conn, "/images/port-vidshare.png")
+                  |> img_tag(class: "img-responsive project-image")
+                  |> link(to: "https://team-vidshare.herokuapp.com", target: "_blank") %>
+              <p class="text-left">
+                Vidshare is an Elixir/Phoenix port of my Rails app Flatcasts. I wanted to build something using Elixir/Phoenix so updating Flatcasts seemed like a great choice. Signed in users can add videos using just the URL from YouTube or Vimeo. The app talks with the API, grabs the relevant video information, adds it to the database, and creates an embedded video on the show page.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <h3>
+                <%# Schedule App <%= link_to 'GitHub', 'https://github.com/thebrianemory/schedule-app', target: '_blank', %>
+                                                    class: 'btn btn-xs custom-btn' %>
+              </h3>
+              <%# <%= link_to image_tag("port-schedule-app.png", class: "img-responsive project-image"), %>
+                                    'https://my-schedule-app.herokuapp.com', target: '_blank'  %>
+              <p class="text-left">
+                My wife was given a spreadsheet to create her employees' schedule from week to week. She has another spreadsheet to keep up with their availability. This a pain when balancing 18 employees. I looked around at other scheduling apps and could not find a free one that fit the bill. So I decided to make her one. Currently in Rails and soon to be redone with Elixir/Phoenix.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <h3>
+                <%# Corneal <%= link_to 'GitHub', 'https://github.com/thebrianemory/corneal', target: '_blank', %>
+                                               class: 'btn btn-xs custom-btn' %>
+              </h3>
+              <%# <%= link_to image_tag("port-corneal.jpg", class: "img-responsive project-image"), %>
+                                    'https://github.com/thebrianemory/corneal', target: '_blank' %>
+              <p class="text-left">
+                Corneal is an open source Sinatra app generator with Rails-like simplicity. I wanted something as easy as <code>rails new app-name</code> for a project I was working on. Closest thing I found was a gem called Hazel. It was suggested to me to make my own. I forked Hazel and like that, Corneal was born. It was featured in <%= link "Ruby Weekly #353", to: "http://rubyweekly.com/issues/353", target: "_blank", class: "about-link" %>.
+              </p>
+            </div>
+          </div>
+      </div>
+  </div>
+</section>
+
