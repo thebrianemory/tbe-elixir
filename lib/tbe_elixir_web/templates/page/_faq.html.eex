@@ -1,0 +1,49 @@
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-offset-1">
+        <div class="hr-section">
+          <h4 class="section-header">
+            Frequently Asked Questions
+          </h4>
+        </div>
+
+        <div class="text-left">
+          <div>
+            <h4>
+            How tall are you?
+            </h4>
+            <p>
+              I am 6'6".
+            </p>
+          </div>
+          <div>
+            <h4>
+              How's the weather up there?
+            </h4>
+            <p>
+              The weather is great.
+            </p>
+          </div>
+          <div>
+            <h4>
+              Do you play basketball?
+            </h4>
+            <p>
+              No, I do not play basketball.
+            </p>
+          </div>
+          <div>
+            <h4>
+              Can you help me? I can't reach up there.
+            </h4>
+            <p>
+              Yes, I can get that down for you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

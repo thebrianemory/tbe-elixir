@@ -1,4 +1,5 @@
 <%= render "_about.html", conn: @conn %>
 <%= render "_blog.html", conn: @conn, posts: @posts %>
 <%= render "_projects.html", conn: @conn %>
+<%= render "_faq.html", conn: @conn %>
 
