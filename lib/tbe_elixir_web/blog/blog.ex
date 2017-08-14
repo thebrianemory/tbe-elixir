@@ -29,11 +29,11 @@ defmodule TbeElixir.Blog do
     parsed_date = Timex.parse!(date, "%Y-%m-%d %H:%M:%S", :strftime)
     t_minus_1 = Timex.shift(Timex.to_naive_datetime(Timex.now), days: -1)
 
-    case parsed_date > t_minus_1 do
+    case Timex.before?(t_minus_1, parsed_date) do
       true ->
         Timex.from_now(parsed_date)
       false ->
-        Timex.format!(t_minus_1, "%b %d, %Y", :strftime)
+        Timex.format!(parsed_date, "%b %d, %Y", :strftime)
     end
   end
 
