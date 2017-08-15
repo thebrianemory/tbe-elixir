@@ -4,7 +4,7 @@
     <small class="blue-text"><%= @post.date %></small><br>
   </h4>
   <h5>
-    <%= @post.heading %>
+    <%= @post.subheading %>
   </h5>
   <p>
     <%= @post.content %> <%= link 'Read more', to: @post.link, target: '_blank' %>

@@ -1,29 +1,28 @@
 defmodule TbeElixir.Blog do
   use Timex
 
-  def get_blog_posts do
-    blog_url = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.brianemory.com%2Ffeed&api_key=#{System.get_env("RSS2JSON")}&count=3"
-    json_data = HTTPoison.get!(blog_url)
+  def blog_posts_truncated(url) do
+    json_data = HTTPoison.get!(url)
     %{feed: _, items: items, status: _} = Poison.Parser.parse!(json_data.body, keys: :atoms)
     Enum.map(items, fn(item) ->
-      get_post_data(item)
+      post_data_truncated(item)
     end)
   end
 
-  def get_post_data(item) do
+  def post_data_truncated(item) do
     %{
       title:   get_title(item.title),
       date:    get_date(item.pubDate),
       link:    get_link(item.link),
-      heading: get_heading(item.content),
-      content: get_content(item.content)
+      subheading: get_subheading!(item.content),
+      content: get_content(item.content),
+      categories: get_categories(item.categories)
     }
   end
 
   def get_title(title) do
     title
   end
-
 
   def get_date(date) do
     parsed_date = Timex.parse!(date, "%Y-%m-%d %H:%M:%S", :strftime)
@@ -41,11 +40,17 @@ defmodule TbeElixir.Blog do
     Regex.run(~r{[^?]+}, link)
   end
 
-  def get_heading(content) do
-    [_, heading] = Regex.replace(~r{(<h4>|<h3>)}, content, "<Z>")
+  def get_subheading!(content) do
+    subheading = Regex.replace(~r{(<h4>|<h3>)}, content, "<Z>")
     |> (&Regex.replace(~r{(<\/h4>|<\/h3>)}, &1, "<Z>")).()
     |> (&Regex.run(~r{<Z>(.*?)<Z>}, &1)).()
-    heading
+
+    case subheading do
+      nil ->
+        ""
+      [_, subheading] ->
+        subheading
+    end
   end
 
   def get_content(content) do
@@ -56,5 +61,9 @@ defmodule TbeElixir.Blog do
     |> (&HtmlSanitizeEx.strip_tags(&1)).()
     |> (&Regex.replace(~r{(\n)}, &1, " ")).()
     |> Kernel.<>("...")
+  end
+
+  def get_categories(categories) do
+    categories
   end
 end
