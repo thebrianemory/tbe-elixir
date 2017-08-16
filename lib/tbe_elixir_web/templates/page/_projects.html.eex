@@ -15,7 +15,7 @@
               </h3>
               <%= static_path(@conn, "/images/port-getmedium.png")
                   |> img_tag(class: "img-responsive project-image")
-                  |> link(to: "https://https://github.com/thebrianemory/get-medium", target: "_blank") %>
+                  |> link(to: "https://github.com/thebrianemory/get-medium", target: "_blank") %>
               <p class="text-left">
                 GetMedium is an Elixir package to solve the problem of Medium's API not having a way to get your blog posts. Medium's API currently only allows posting to your blog which is a problem for those of us who want to display all or part of our recent posts on our personal site. GetMedium returns a truncated version of your Medium blog posts.
               </p>
