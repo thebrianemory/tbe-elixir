@@ -4,15 +4,22 @@ defmodule TbeElixirWeb.Plug.Subdomain do
   @doc false
   def init(default), do: default
 
-  @doc false
+  @doc """
+  This plug ensures that the subdomain of "www" gets routed to the standard page_controller, subdomains of "til" get routed to the subdomain page_controller, no subdomain also goes to the standard page_controller, and everything else goes to a 404.
+  """
   def call(conn, router) do
     case get_subdomain(conn.host) do
-      subdomain when byte_size(subdomain) > 0 ->
+      subdomain when subdomain == "www" -> conn
+      subdomain when subdomain == "til" ->
         conn
-        |> put_private(:subdomain, subdomain)
         |> router.call(router.init({}))
         |> halt
-        _-> conn
+      subdomain when byte_size(subdomain) == 0 ->
+        conn
+      _->
+        conn
+        |> Phoenix.Controller.render(TbeElixirWeb.ErrorView, "404.html")
+        |> halt
     end
   end
 
