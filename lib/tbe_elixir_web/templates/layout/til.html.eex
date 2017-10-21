@@ -15,7 +15,7 @@
 
   <body data-spy="scroll" data-target=".navbar-fixed-top" id="page-top">
     <div class="container">
-      <%= render "_navigation.html", conn: @conn %>
+      <%= render "_til_nav.html", conn: @conn %>
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
