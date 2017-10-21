@@ -1,7 +1,7 @@
 <div class="container">
   <footer class="footer">
       <p>
-          &copy; Brian Emory 2017
+        <span class="conn-test"><%= @conn.host %></span>&copy; Brian Emory 2017
       </p>
   </footer>
 </div>
