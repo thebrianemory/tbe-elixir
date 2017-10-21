@@ -9,17 +9,13 @@ defmodule TbeElixirWeb.Plug.Subdomain do
   """
   def call(conn, router) do
     case get_subdomain(conn.host) do
+      subdomain when byte_size(subdomain) == 0 -> conn
       subdomain when subdomain == "www" -> conn
       subdomain when subdomain == "til" ->
         conn
         |> router.call(router.init({}))
         |> halt
-      subdomain when byte_size(subdomain) == 0 ->
-        conn
-      _->
-        conn
-        |> Phoenix.Controller.render(TbeElixirWeb.ErrorView, "404.html")
-        |> halt
+      _-> conn
     end
   end
 
