@@ -12,13 +12,12 @@
 
       case subdomain do
         subdomain when byte_size(subdomain) == 0 -> conn
-        subdomain when subdomain == "www" -> conn |> put_private(:subdomain, subdomain)
+        subdomain when subdomain == "www" -> conn
         subdomain when subdomain == "til" ->
           conn
-          |> put_private(:subdomain, subdomain)
           |> router.call(router.init({}))
           |> halt
-        subdomain -> conn |> put_private(:subdomain, subdomain <> " --no luck")
+        _ -> conn 
       end
     end
 
