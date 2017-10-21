@@ -1,4 +1,4 @@
-defmodule TbeElixirWeb.Subdomain.PageControllerTest do
+defmodule TbeElixirWeb.Til.PageControllerTest do
   use TbeElixirWeb.ConnCase, async: true
 
   test "GET /", %{conn: conn} do

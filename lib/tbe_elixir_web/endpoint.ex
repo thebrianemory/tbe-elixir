@@ -38,7 +38,7 @@ defmodule TbeElixirWeb.Endpoint do
     key: "_tbe_elixir_key",
     signing_salt: "A3nOQCCC"
 
-  plug TbeElixirWeb.Plug.Subdomain, TbeElixirWeb.SubdomainRouter
+  plug TbeElixirWeb.Plug.Til, TbeElixirWeb.TilRouter
   plug TbeElixirWeb.Router
 
   @doc """

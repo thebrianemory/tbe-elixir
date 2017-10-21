@@ -1,4 +1,4 @@
-defmodule TbeElixirWeb.SubdomainRouter do
+defmodule TbeElixirWeb.TilRouter do
   use TbeElixirWeb, :router
 
   pipeline :browser do
@@ -9,7 +9,7 @@ defmodule TbeElixirWeb.SubdomainRouter do
     plug :put_secure_browser_headers
   end
 
-  scope "/", TbeElixirWeb.Subdomain do
+  scope "/", TbeElixirWeb.Til do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
