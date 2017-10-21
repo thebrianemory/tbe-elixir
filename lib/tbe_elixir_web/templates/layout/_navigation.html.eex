@@ -19,6 +19,9 @@
             <%= link "", to: "#page-top", class: "page-scroll" %>
           </li>
           <li>
+            <%= link "TIL", to: "https://til.brianemory.com/", class: "page-scroll blue-text" %>
+          </li>
+          <li>
             <%= link "Blog", to: "#blog", class: "page-scroll blue-text" %>
           </li>
           <li>

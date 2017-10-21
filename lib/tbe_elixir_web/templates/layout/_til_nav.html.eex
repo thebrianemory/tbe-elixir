@@ -19,6 +19,9 @@
             <%= link "", to: "https://www.brianemory.com/", class: "page-scroll" %>
           </li>
           <li>
+            <%= link "TIL", to: "https://til.brianemory.com/", class: "page-scroll blue-text" %>
+          </li>
+          <li>
             <%= link "Blog", to: "https://www.brianemory.com/#blog", class: "page-scroll blue-text" %>
           </li>
           <li>
