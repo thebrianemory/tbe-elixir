@@ -16,7 +16,7 @@ defmodule TbeElixirWeb.Plug.Subdomain do
         |> put_private(:subdomain, subdomain)
         |> router.call(router.init({}))
         |> halt
-      _-> conn
+      _-> conn |> put_private(:subdomain, "no luck")
     end
   end
 
