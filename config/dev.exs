@@ -51,7 +51,7 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :tbe_elixir, TbeElixir.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "brianemory",
+  username: "thebrianemory",
   password: "",
   database: "tbe_elixir_dev",
   hostname: "localhost",

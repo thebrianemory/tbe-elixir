@@ -12,7 +12,7 @@ config :logger, level: :warn
 # Configure your database
 config :tbe_elixir, TbeElixir.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "brianemory",
+  username: "thebrianemory",
   password: "",
   database: "tbe_elixir_test",
   hostname: "localhost",
