@@ -1,7 +1,7 @@
 <div class="container">
   <footer class="footer">
       <p>
-        <span class="conn-test"><%= @conn.private[:subdomain] %></span>&copy; Brian Emory 2017
+        &copy; Brian Emory 2017
       </p>
   </footer>
 </div>
