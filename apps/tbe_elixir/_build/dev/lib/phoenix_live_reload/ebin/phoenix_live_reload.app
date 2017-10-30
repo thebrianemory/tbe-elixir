@@ -1,0 +1,11 @@
+{application,phoenix_live_reload,
+             [{description,"Provides live-reload functionality for Phoenix"},
+              {modules,['Elixir.Phoenix.LiveReload.Channel',
+                        'Elixir.Phoenix.LiveReloader',
+                        'Elixir.Phoenix.LiveReloader.Socket',
+                        'Elixir.PhoenixLiveReload.Application']},
+              {registered,[]},
+              {vsn,"1.1.0"},
+              {mod,{'Elixir.PhoenixLiveReload.Application',[]}},
+              {applications,[kernel,stdlib,elixir,logger,phoenix,
+                             file_system]}]}.

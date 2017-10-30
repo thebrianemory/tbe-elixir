@@ -29,3 +29,4 @@ npm-debug.log
 .ds_store
 .env
 /node_modules
+/apps/tilex
