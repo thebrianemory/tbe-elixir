@@ -1,0 +1,5 @@
+@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css);
+
+code {
+  font-family: Fira Code, monaco, Consolas, Menlo, Courier, monospace !important;
+}

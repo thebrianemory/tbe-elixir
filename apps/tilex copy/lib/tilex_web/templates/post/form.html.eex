@@ -1,0 +1,53 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <dl>
+    <dt>
+      <%= label f, :title %>
+      <%= error_tag f, :title %>
+      <small class="character_limit" data-limit="<%= Tilex.Post.title_max_chars %>"></small>
+    </dt>
+    <dd>
+      <%= text_input f, :title, placeholder: "Enter title..." %>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <%= label f, :body %>
+      <%= error_tag f, :body %>
+      <small class="word_limit" data-limit="<%= Tilex.Post.body_max_words %>"></small>
+    </dt>
+    <dd>
+      <%= textarea f, :body,
+        placeholder: "Enter body...",
+        class: "autosize",
+        style: "overflow: hidden; word-wrap: break-word; height: 72px;"
+      %>
+    </dd>
+    <dt>
+      <%= label f, :channel_id, "Channel" %>
+      <%= error_tag f, :channel_id %>
+    </dt>
+    <dd>
+      <%= select f, :channel_id, @channels, prompt: "" %>
+    </dd>
+  </dl>
+  <%= submit "Submit" %>
+  <%= link("cancel", to: "/") %>
+<% end %>
+
+<article class="post">
+  <section>
+    <div class="post__content copy">
+      <h1 class="title_preview"></h1>
+      <div class="content_preview">
+      </div>
+      <footer>
+        <p>word count: <span class="word_count">0</span></p>
+      </footer>
+    </div>
+  </section>
+</article>
+
+<script type="text/javascript">
+  var TIL = TIL || {};
+  TIL.editor = '<%= @current_user.editor %>';
+</script>
