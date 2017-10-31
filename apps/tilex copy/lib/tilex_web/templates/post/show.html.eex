@@ -1,5 +1,0 @@
-<%= render TilexWeb.SharedView, "post.html",
-  conn: @conn,
-  post: @post,
-  twitter_shareable: assigns[:twitter_shareable]
-%>
