@@ -107,11 +107,11 @@ wait_headers({header, {Key, Value}, Parser}, Client, Status, Headers) ->
 wait_headers({headers_complete, Parser}, Client, Status, Headers) ->
   ResponseTime = timer:now_diff(os:timestamp(),
     Client#client.start_time)/1000,
-  _ = metrics:update_histogram(Client#client.mod_metrics,
-                               [hackney, Client#client.host, response_time],
-                               ResponseTime),
+  metrics:update_histogram(Client#client.mod_metrics,
+    [hackney, Client#client.host, response_time],
+    ResponseTime),
   HeadersList = hackney_headers_new:to_list(Headers),
-  TE = hackney_headers_new:get_value(<<"transfer-encoding">>, Headers, nil),
+  TE = hackney_headers_new:get_value("transfer-encoding", Headers, nil),
   CLen = case hackney_headers_new:lookup("content-length", Headers) of
            [] -> nil;
            [{_, Len} |_] -> list_to_integer(binary_to_list(Len))
@@ -154,7 +154,7 @@ stream_body1(Error, _Client) ->
 
 
 -spec stream_body_recv(binary(), #client{})
-    -> {ok, binary(), #client{}} | {error, term()}.
+    -> {ok, binary(), #client{}} | {error, atom()}.
 stream_body_recv(Buffer, Client=#client{version=Version,
   clen=CLen}) ->
   case recv(Client) of
@@ -298,23 +298,19 @@ end_stream_body(Rest, Client0) ->
 
 
 -spec read_body(non_neg_integer() | infinity, #client{}, binary())
-    -> {ok, binary(), #client{}} | {error, term()}.
+    -> {ok, binary(), #client{}} | {error, any()}.
 read_body(MaxLength, Client, Acc) when MaxLength > byte_size(Acc) ->
   case stream_body(Client) of
     {ok, Data, Client2} ->
       read_body(MaxLength, Client2, << Acc/binary, Data/binary >>);
     {done, Client2} ->
       {ok, Acc, Client2};
-    {error, Reason}=Error ->
-      case Reason of
-        {closed, Bin} when is_binary(Bin) ->
-          {error, {closed, << Acc/binary, Bin/binary >>}};
-        _ ->
-          Error
-      end;
-    Else ->
-      {error, Else}
+    {error, {closed, Bin}} when is_binary(Bin) ->
+      {error, {closed, << Acc/binary, Bin/binary >>}};
+    {error, Reason} ->
+      {error, Reason}
   end;
+
 read_body(_MaxLength, Client, Acc) ->
   Client2 = end_stream_body(<<>>, Client),
   {ok, Acc, Client2}.

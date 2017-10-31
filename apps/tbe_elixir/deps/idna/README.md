@@ -6,11 +6,18 @@ A pure Erlang IDNA implementation.
 ## Usage
 
 ```erlang
-1> Domain = unicode:characters_to_list("www.詹姆斯.com").
+1> Domain = unicode.characters_to_list("www.詹姆斯.com").
 ...
 2> idna:to_ascii(Domain).
 ...
 ```
+
+> Note: to regenerate the datafile, run the following commandline:
+>
+>	$ ./mkdata.sh
+>
+> Then recompile.
+
 
 
 ## Useful references
