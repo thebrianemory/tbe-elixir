@@ -42,6 +42,7 @@ defmodule TbeElixir.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:get_medium, "~> 0.3.0"},
+      {:tilex, in_umbrella: true}
     ]
   end
 
