@@ -1,0 +1,17 @@
+/_build
+/deps
+erl_crash.dump
+*.ez
+.tmux.rb
+tmp/*
+.tool-versions
+.mix_tasks
+notes/*
+/earmark
+*.beam
+doc/
+
+# leex generated file
+src/string_lexer.erl
+cover
+lib/tools

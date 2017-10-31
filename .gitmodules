@@ -1,7 +1,3 @@
 [submodule "apps/tilex"]
 	path = apps/tilex
 	url = git@github.com:thebrianemory/tilex.git
-
-[submodule "apps/tbe_elixir/deps/earmark"]
-	path = apps/tbe_elixir/deps/earmark
-	ignore = untracked
