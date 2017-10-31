@@ -1,8 +1,0 @@
-# apps/tbe_elixir (default)
-brunch build --production
-mix phx.digest
-
-# apps/tilex
-cd ../tilex
-brunch build --production
-mix phx.digest
