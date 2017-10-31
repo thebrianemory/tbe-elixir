@@ -15,7 +15,7 @@
         subdomain when subdomain == "www" -> conn
         subdomain when subdomain == "til" ->
           conn
-          |> TilexWeb.Endpoint.call([])
+          |> TilexWeb.Router.call(TilexWeb.Router.init({}))
           |> halt
         _ -> conn
       end
