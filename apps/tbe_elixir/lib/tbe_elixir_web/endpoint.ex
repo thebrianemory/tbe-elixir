@@ -42,7 +42,7 @@ defmodule TbeElixirWeb.Endpoint do
   plug Timber.Integrations.HTTPContextPlug
   plug Timber.Integrations.EventPlug
 
-  plug TbeElixirWeb.Plug.Til, TbeElixirWeb.TilRouter
+  plug TbeElixirWeb.Plug.Til
   # Add Timber plugs for capturing HTTP context and events
   plug Timber.Integrations.SessionContextPlug
   plug Timber.Integrations.HTTPContextPlug
