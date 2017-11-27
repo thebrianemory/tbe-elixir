@@ -8,12 +8,3 @@ config :tbe_elixir, TbeElixirWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
-
-# Configure your database
-config :tbe_elixir, TbeElixir.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "thebrianemory",
-  password: "",
-  database: "tbe_elixir_test",
-  hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox

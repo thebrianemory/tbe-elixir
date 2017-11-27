@@ -28,10 +28,6 @@ defmodule TbeElixirWeb.ConnCase do
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(TbeElixir.Repo)
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(TbeElixir.Repo, {:shared, self()})
-    end
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 

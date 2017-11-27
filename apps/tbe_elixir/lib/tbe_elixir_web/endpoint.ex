@@ -37,17 +37,6 @@ defmodule TbeElixirWeb.Endpoint do
     key: "_tbe_elixir_key",
     signing_salt: "A3nOQCCC"
 
-  # Add Timber plugs for capturing HTTP context and events
-  plug Timber.Integrations.SessionContextPlug
-  plug Timber.Integrations.HTTPContextPlug
-  plug Timber.Integrations.EventPlug
-
-  plug TbeElixirWeb.Plug.Til
-  # Add Timber plugs for capturing HTTP context and events
-  plug Timber.Integrations.SessionContextPlug
-  plug Timber.Integrations.HTTPContextPlug
-  plug Timber.Integrations.EventPlug
-
   plug TbeElixirWeb.Router
 
   @doc """

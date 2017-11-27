@@ -5,10 +5,6 @@
 # is restricted to this project.
 use Mix.Config
 
-# General application configuration
-config :tbe_elixir,
-  ecto_repos: [TbeElixir.Repo]
-
 # Configures the endpoint
 config :tbe_elixir, TbeElixirWeb.Endpoint,
   url: [host: "localhost"],
