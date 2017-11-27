@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
     <title>Brian Emory | Web Developer</title>
-    <link rel="stylesheet" href="https://til.brianemory.com/css/app-98a96aa793e8a58b8b0bff90c0fe605b.css?vsn=d">
+    <link rel="stylesheet" href="css/app.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="icon" type="image/x-icon" href="<%= static_path(@conn, "/images/icons/favicon-96x96.png") %>" %>
   </head>
@@ -24,6 +24,6 @@
       </main-tbe>
 
     </div> <!-- /container -->
-    <script src="https://til.brianemory.com/js/app-2f952e652e9e1dd86a46f846352c3efd.js?vsn=d"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
