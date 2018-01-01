@@ -13,9 +13,6 @@
               <h3>
                 GetMedium <%= link "GitHub", to: "https://github.com/thebrianemory/get-medium", target: "_blank", class: "btn btn-xs custom-btn" %>
               </h3>
-              <%= static_path(@conn, "/images/port-getmedium.png")
-                  |> img_tag(class: "img-responsive project-image")
-                  |> link(to: "https://github.com/thebrianemory/get-medium", target: "_blank") %>
               <p class="text-left">
                 GetMedium is an Elixir package to solve the problem of Medium's API not having a way to get your blog posts. Medium's API currently only allows posting to your blog which is a problem for those of us who want to display all or part of our recent posts on our personal site. GetMedium returns a truncated version of your Medium blog posts.
               </p>
@@ -24,9 +21,6 @@
               <h3>
                 Catcasts <%= link "GitHub", to: "https://github.com/thebrianemory/catcasts-phx1.3", target: "_blank", class: "btn btn-xs custom-btn" %>
               </h3>
-              <%= static_path(@conn, "/images/port-catcasts.png")
-                  |> img_tag(class: "img-responsive project-image")
-                  |> link(to: "https://github.com/thebrianemory/catcasts-phx1.3", target: "_blank") %>
               <p class="text-left">
                 Catcasts is an Elixir Phoenix tutorial based on my app Vidshare. It is a <%= link "nine-part blog series", to: "https://medium.brianemory.com/elixir-phoenix-creating-an-app-part-1-the-setup-6626264be03", target: "_blank" %> taking you through the process of creating an app with tests. It uses Google OAuth, interacts with the YouTube API, and uses Foundation instead of the default Bootstrap. Originally built using Phoenix 1.2, it has recently been updated to Phoenix 1.3.
               </p>
@@ -35,9 +29,6 @@
               <h3>
                 Vidshare <%= link "GitHub", to: "https://github.com/thebrianemory/vidshare", target: "_blank", class: "btn btn-xs custom-btn" %>
               </h3>
-              <%= static_path(@conn, "/images/port-vidshare.png")
-                  |> img_tag(class: "img-responsive project-image")
-                  |> link(to: "https://team-vidshare.herokuapp.com", target: "_blank") %>
               <p class="text-left">
                 Vidshare is an Elixir/Phoenix port of my Rails app Flatcasts. I wanted to build something using Elixir/Phoenix so updating Flatcasts seemed like a great choice. Signed in users can add videos using just the URL from YouTube or Vimeo. It is the basis for my <%= link "Elixir tutorial on Medium", to: "https://medium.brianemory.com/elixir-phoenix-creating-an-app-part-1-the-setup-6626264be03", target: "_blank", class: "about-link" %> to create an Elixir/Phoenix app called Catcasts.
               </p>
