@@ -30,7 +30,18 @@
                 Vidshare <%= link "GitHub", to: "https://github.com/thebrianemory/vidshare", target: "_blank", class: "btn btn-xs custom-btn" %>
               </h3>
               <p class="text-left">
-                Vidshare is an Elixir/Phoenix port of my Rails app Flatcasts. I wanted to build something using Elixir/Phoenix so updating Flatcasts seemed like a great choice. Signed in users can add videos using just the URL from YouTube or Vimeo. It is the basis for my <%= link "Elixir tutorial on Medium", to: "https://medium.brianemory.com/elixir-phoenix-creating-an-app-part-1-the-setup-6626264be03", target: "_blank", class: "about-link" %> to create an Elixir/Phoenix app called Catcasts.
+                Vidshare is an Elixir/Phoenix port of my Rails app Flatcasts. I wanted to build something using Elixir/Phoenix so updating Flatcasts seemed like a great choice. Signed in users can add videos using just the URL from YouTube or Vimeo. It is the basis for my <%= link "Elixir tutorial on Medium", to: "https://medium.brianemory.com/elixir-phoenix-creating-an-app-part-1-the-setup-6626264be03", target: "_blank" %> to create an Elixir/Phoenix app called Catcasts.
+              </p>
+            </div>
+          </div>
+          <!-- For second row of projects -->
+          <div class="row">
+            <div class="col-md-4">
+              <h3>
+                Corneal <%= link "GutHub", to: "https://github.com/thebrianemory/corneal", target: "_blank", class: "btn btn-xs custom-btn" %>
+              </h3>
+              <p class="text-left">
+                Corneal is a Ruby gem to generate Sinatra apps with Rails-like simplicity. After struggling to build my Sinatra project for Flatiron School, I built this gem to help my fellow students get their projects up and running. Allows a Sintra app to be created by running <code>corneal new APP-NAME</code>. Featured in <%= link "Ruby Weekly #353", to: "https://rubyweekly.com/issues/353", target: "_blank" %>.
               </p>
             </div>
           </div>
