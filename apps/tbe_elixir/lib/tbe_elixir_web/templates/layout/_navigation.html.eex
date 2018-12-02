@@ -25,9 +25,6 @@
             <%= link "Blog", to: "#blog", class: "page-scroll blue-text" %>
           </li>
           <li>
-            <%= link "Projects", to: "#projects", class: "page-scroll blue-text" %>
-          </li>
-          <li>
             <%= link "FAQ", to: "#faq", class: "page-scroll blue-text" %>
           </li>
           <li class="social-icons">
